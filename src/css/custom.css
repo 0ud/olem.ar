@@ -1,30 +1,91 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* ألوان رئيسية */
+  --ifm-color-primary: hsl(200, 100%, 50%);
+  --ifm-color-primary-dark: hsl(200, 100%, 40%);
+  --ifm-color-primary-darker: hsl(200, 100%, 30%);
+  --ifm-color-primary-darkest: hsl(200, 100%, 20%);
+  --ifm-color-primary-light: hsl(200, 100%, 50%);
+  --ifm-color-primary-lighter: hsl(200, 100%, 60%);
+  --ifm-color-primary-lightest: hsl(200, 100%, 70%);
   --ifm-code-font-size: 95%;
+  --ifm-navbar-height: 4.5rem;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* الظل */
+  --shadow: 0 .2rem 1rem hsla(0, 0%, 0%, 0.15);
+
+  /* ألوان أولية */
+  --red: #ef4444;
+  --green: #84cc16;
+  --yellow: #fde047;
+  --black: #090909;
+
+  /* ألوان الواجهة */
+  --bg: hsl(240, 10%, 5%);
+  --sec: hsl(240, 10%, 10%);
+  --box: hsl(240, 10%, 15%);
+  --font: hsl(0, 0%, 95%);
+  --second-font: hsl(240, 10%, 85%);
+  --disable-font: hsl(240, 10%, 75%);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ألوان الوضع المظلم */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: hsl(259, 90%, 66%);
+  --ifm-color-primary-dark: hsl(259, 90%, 56%);
+  --ifm-color-primary-darker: hsl(259, 90%, 46%);
+  --ifm-color-primary-darkest: hsl(259, 90%, 36%);
+  --ifm-color-primary-light: hsl(259, 90%, 76%);
+  --ifm-color-primary-lighter: hsl(259, 90%, 86%);
+  --ifm-color-primary-lightest: hsl(259, 90%, 96%);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.15);
+  
+  /* ألوان الواجهة */
+  --bg: hsl(240, 10%, 5%);
+  --sec: hsl(240, 10%, 10%);
+  --box: hsl(240, 10%, 15%);
+  --font: hsl(0, 0%, 95%);
+  --second-font: hsl(240, 10%, 85%);
+  --disable-font: hsl(240, 10%, 75%);
+}
+
+.navbar {
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.navbar * {
+  position: relative;
+  z-index: 2;
+}
+.navbar ::after {
+  background-color: var(--ifm-color-primary);
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  max-width: 30vw;
+  max-height: 30vh;
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  content: "";
+  opacity: 0.1;
+  filter: blur(150px);
+  z-index: 1;
+}
+
+
+.navbar ::before {
+  background-color: var(--ifm-color-primary);
+  width: 300px;
+  height: 300px;
+  max-width: 30vw;
+  max-height: 30vh;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 50%;
+  right: -50px;
+  content: "";
+  opacity: 0.1;
+  filter: blur(1500px);
+  z-index: 1;
 }
