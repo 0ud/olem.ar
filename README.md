@@ -40,7 +40,7 @@
 ### خطوات التشغيل
 استنساخ المستودع من المنصة:
 ```bash
-git clone https://github.com/your-username/olim.git
+git clone https://github.com/binhunaish/olim.git
 ```
 الانتقال إلى مجلد المشروع:
 ```bash
