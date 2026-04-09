@@ -98,7 +98,7 @@ const config = {
           items: [
             {
               label: 'الدروس',
-              to: '/docs/intro',
+              to: '/docs/python/مقدمة',
             },
             {
               label: 'المدونة',
